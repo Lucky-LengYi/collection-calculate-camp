@@ -4,7 +4,7 @@ function get_letter_interval_2(number_a, number_b) {
 
     var NUMBER_OF_LETTERS = 26;
     var array = [];
-    var i,x;
+    var i;
 
     if (number_a < number_b) {
         for (i = number_a; i <= number_b; i++) {
@@ -31,6 +31,7 @@ function get_letter_interval_2(number_a, number_b) {
             letter = String.fromCharCode(array[i]+96);
             array[i] = letter;
         }
+
     }
     return array;
 
