@@ -1,7 +1,9 @@
 'use strict';
 
 function collect_all_even(collection) {
-  //在这里写入代码
+    var _ = require('../lodash');
+
+    return _.remove(collection, function(n) {return n % 2 === 0;});
 }
 
 module.exports = collect_all_even;

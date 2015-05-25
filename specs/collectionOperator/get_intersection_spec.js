@@ -14,4 +14,3 @@ describe('get_intersection', function () {
     expect(result).toEqual(collection_c);
   });
 });
-
