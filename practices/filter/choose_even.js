@@ -1,8 +1,9 @@
 'use strict';
 
 function choose_even(collection) {
+    var _ = require('../lodash');
 
-  //在这里写入代码
+    return _.remove(collection, function(n) {return n % 2 === 0;});
 }
 
 module.exports = choose_even;
