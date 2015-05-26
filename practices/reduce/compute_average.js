@@ -3,10 +3,9 @@
 function compute_average(collection) {
     var _ = require('../lodash');
 
-    var sum = 0;
-    for (var i = 0; i < collection.length; i++) {
-        sum = sum + collection[i];
-    }
+
+
+    var sum = _.sum(collection);
     var average = sum/collection.length;
     return average;
 }
