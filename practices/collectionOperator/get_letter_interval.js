@@ -2,8 +2,8 @@
 
 function get_letter_interval(number_a, number_b) {
     var array = [];
-    var i,x,y;
-    var _ = require('../lodash');
+    var i;
+
 
     if (number_a < number_b) {
         for (i = number_a; i <= number_b; i++) {
