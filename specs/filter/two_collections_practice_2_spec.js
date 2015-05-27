@@ -13,4 +13,3 @@ describe('choose_no_common_elements', function() {
     expect(result).toEqual(["h", "t", "c", "g", "b"]);
   })
 });
-
