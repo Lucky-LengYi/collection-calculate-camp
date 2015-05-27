@@ -6,12 +6,12 @@ function get_integer_interval(number_a, number_b) {
 
     if (number_a < number_b) {
         for (i = number_a; i <= number_b; i++) {
-            array.push(i);
+            array[array.length](i);
         }
     }
     if (number_a >= number_b) {
         for (i = number_a; i >= number_b; i--) {
-            array.push(i);
+            array[array.length](i);
         }
     }
     return array;

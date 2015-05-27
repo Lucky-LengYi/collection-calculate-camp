@@ -2,7 +2,7 @@
 
 function get_three_times(array,num) {
     if (num%3 === 0) {
-        array.push(num);
+        array[array.length](num);
     }
     return array;
 }

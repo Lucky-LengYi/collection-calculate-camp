@@ -2,7 +2,7 @@
 
 function get_even(array,num) {
     if (num%2 === 0) {
-        array.push(num);
+        array[array.length](num);
     }
     return array;
 }
