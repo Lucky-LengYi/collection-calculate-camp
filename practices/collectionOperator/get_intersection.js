@@ -1,7 +1,7 @@
 'use strict';
 function get_same_number(array,num_a,num_b) {
     if (num_a === num_b) {
-        array[array.length](num_a);
+        array[array.length] = num_a;
     }
     return array;
 }
