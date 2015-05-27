@@ -6,7 +6,7 @@ function no_repeat_number(array,num) {
         exist = num === array[i]?true:false;
     }
     if (!exist) {
-        array[array.length](num);
+        array[array.length] = num;
     }
 
     return array;

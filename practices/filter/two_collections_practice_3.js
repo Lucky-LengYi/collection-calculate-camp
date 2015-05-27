@@ -7,7 +7,7 @@ function choose_divisible_integer(collection_a, collection_b) {
     for (var i = 0; i < collection_a.length; i++) {
         for (var x = 0; x < collection_b.length; x++) {
             if (collection_a[i]%collection_b[x] === 0) {
-                result.push(collection_a[i]);
+                result[result.length] = collection_a[i];
             }
         }
     }
