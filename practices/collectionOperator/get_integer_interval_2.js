@@ -1,21 +1,25 @@
 'use strict';
 
+function get_even_number(array,number) {
+    if(number%2 === 0){
+        array.push(number);
+    }
+    return array;
+}
+
 function get_integer_interval_2(number_a, number_b) {
     var array = [];
     var i,x,y;
-    var _ = require('../lodash');
 
     if (number_a < number_b) {
         for (i = number_a; i <= number_b; i++) {
-            array.push(i);
+            array = get_even_number(array,i);
         }
-        return _.remove(array, function(n) {return n % 2 === 0;});
     }
     if (number_a >= number_b) {
         for (i = number_a; i >= number_b; i--) {
-            array.push(i);
+            array = get_even_number(array,i);
         }
-        return _.remove(array, function(n) {return n % 2 === 0;});
     }
 
     return array;
