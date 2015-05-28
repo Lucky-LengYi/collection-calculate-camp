@@ -1,7 +1,16 @@
 'use strict';
 var rank_desc = function(collection){
-    var _ = require('../lodash');
-    return _.sortBy(collection);
+    var num;
+    for (var i = 0; i < collection.length; i++) {
+        for (var x = i + 1; x < collection.length; x++) {
+            if (collection[x] < collection[i]) {
+                num = collection[i];
+                collection[i] = collection[x];
+                collection[x] = num;
+            }
+        }
+    }
+    return collection;
 };
 
 module.exports = rank_desc;
