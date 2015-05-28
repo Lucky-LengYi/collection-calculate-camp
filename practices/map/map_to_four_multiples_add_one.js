@@ -1,12 +1,13 @@
 'use strict';
+function four_times_add_one(num) {
+    return num * 4 + 1;
+}
+
 var map_to_four_multiples_add_one = function(collection){
-    var _ = require('../lodash');
-
-    function four_times_add_one(n) {
-        return n * 4 + 1;
+    for (var i = 0; i < collection.length; i++) {
+      collection[i] = four_times_add_one(collection[i]);
     }
-
-    return _.map(collection,four_times_add_one);
+    return collection;
 };
 
 module.exports = map_to_four_multiples_add_one;

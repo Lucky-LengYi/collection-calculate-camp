@@ -1,11 +1,13 @@
 'use strict';
+
+function two_times(num) {
+    return num * 2;
+}
+
 function map_to_even(collection){
-    var _ = require('../lodash');
-
-    function two_times(n) {
-        return n * 2;
+    for (var i = 0; i < collection.length; i++) {
+       collection[i] = two_times(collection[i]);
     }
-
-    return _.map(collection,two_times);
+    return collection;
 }
 module.exports = map_to_even;
