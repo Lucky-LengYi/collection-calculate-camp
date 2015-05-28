@@ -3,7 +3,9 @@ function no_repeat_number(array,num) {
 
     var exist = false;
     for (var i = 0; i < array.length; i++) {
-        exist = num === array[i]?true:false;
+        if (num === array[i]) {
+            exist = true;
+        }
     }
     if (!exist) {
         array[array.length] = num;
