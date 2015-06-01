@@ -1,9 +1,10 @@
 'use strict';
 
-function collect_last_element(collection) {
-    var result = collection[collection.length-1];
+var _ = require('../my_lodash/my_lodash.js');
 
-    return result;
+function collect_last_element(collection) {
+    return _.last(collection);
+
 }
 
 module.exports = collect_last_element;

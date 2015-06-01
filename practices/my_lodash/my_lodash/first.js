@@ -3,8 +3,10 @@ var filter_in = require('./filter_in.js');
 var reduce = require('./reduce.js');
 
 function first(collection, func) {
-    var result;
-    result = filter_in(collection, func);
+    var result = collection;
+    if (func !== undefined) {
+        result = filter_in(collection, func);
+    }
     var first_item;
     reduce(result,function (num_a,num_b) {
         first_item = num_a;
