@@ -1,13 +1,15 @@
 'use strict';
 
+var _ = require('../my_lodash/my_lodash.js');
+
 function collect_all_even(collection) {
     var result = [];
-    for (var i = 0; i < collection.length; i++) {
-        if (collection[i]%2===0) {
-            result[result.length] = collection[i];
+    return _.filter_in(collection,function (num) {
+        if (num % 2 === 0) {
+            return true;
         }
-    }
-    return result;
+        return false;
+    });
 }
 
 module.exports = collect_all_even;

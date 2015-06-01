@@ -1,5 +1,5 @@
 var each = require('./each.js');
-var filter_in = require('./filter.js');
+var filter_in = require('./filter_in.js');
 var reduce = require('./reduce.js');
 
 function first(collection, func) {
