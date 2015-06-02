@@ -1,12 +1,13 @@
 'use strict';
+
+var _ = require('../my_lodash/my_lodash.js');
 var number_map_to_word = function(collection){
-    var array = [];
 
-    for (var i = 0; i < collection.length; i++) {
-        array.push(String.fromCharCode(collection[i]+96));
-    }
+    var result = _.map(collection,function (num) {
+        return String.fromCharCode(num+96);
+    });
+    return result;
 
-    return array;
 };
 
 module.exports = number_map_to_word;

@@ -11,4 +11,3 @@ describe('number_map_to_word_over_26',function(){
     expect(result).toEqual(collection_b);
   });
 });
-
