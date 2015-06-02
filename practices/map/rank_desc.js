@@ -1,16 +1,9 @@
 'use strict';
+var _ = require('../my_lodash/my_lodash.js');
+
 var rank_desc = function(collection){
-    var num;
-    for (var i = 0; i < collection.length; i++) {
-        for (var x = i + 1; x < collection.length; x++) {
-            if (collection[x] < collection[i]) {
-                num = collection[i];
-                collection[i] = collection[x];
-                collection[x] = num;
-            }
-        }
-    }
-    return collection;
+    var result = _.bubble_sort(collection);
+    return result;
 };
 
 module.exports = rank_desc;

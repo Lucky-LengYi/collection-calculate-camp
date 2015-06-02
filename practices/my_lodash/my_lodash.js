@@ -9,4 +9,5 @@ module.exports = {
   'max': require('./my_lodash/max'),
   'min': require('./my_lodash/min'),
   'sum': require('./my_lodash/sum'),
+  'bubble_sort': require('./my_lodash/bubble_sort'),
 };
