@@ -13,16 +13,6 @@ function even_to_letter(collection) {
         var LETTER_NUM = 96;
         result[i] = String.fromCharCode(result[i]+LETTER_NUM);
     });
-    //
-    // for (var i = 0; i < collection.length; i++) {
-    //     if (collection[i]%2===0) {
-    //         result[result.length] = collection[i];
-    //     }
-    // }
-
-    // for (var i = 0; i < result.length; i++) {
-    //     result[i] = String.fromCharCode(result[i]+96);
-    // }
 
     return result;
 }
