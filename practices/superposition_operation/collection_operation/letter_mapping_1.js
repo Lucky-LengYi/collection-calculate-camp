@@ -1,16 +1,28 @@
 'use strict';
+var _ = require('../../my_lodash/my_lodash.js');
 
 function even_to_letter(collection) {
-    var result = [];
-    for (var i = 0; i < collection.length; i++) {
-        if (collection[i]%2===0) {
-            result[result.length] = collection[i];
+    var result = _.filter_in(collection,function (num) {
+        if (num % 2 === 0) {
+            return true;
+        }else {
+            return false;
         }
-    }
+    });
+    _.each(result,function (num,i) {
+        var LETTER_NUM = 96;
+        result[i] = String.fromCharCode(result[i]+LETTER_NUM);
+    });
+    //
+    // for (var i = 0; i < collection.length; i++) {
+    //     if (collection[i]%2===0) {
+    //         result[result.length] = collection[i];
+    //     }
+    // }
 
-    for (i = 0; i < result.length; i++) {
-        result[i] = String.fromCharCode(result[i]+96);
-    }
+    // for (var i = 0; i < result.length; i++) {
+    //     result[i] = String.fromCharCode(result[i]+96);
+    // }
 
     return result;
 }
