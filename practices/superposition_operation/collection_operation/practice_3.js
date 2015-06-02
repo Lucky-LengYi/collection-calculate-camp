@@ -1,13 +1,18 @@
 'use strict';
+var _ = require('../../my_lodash/my_lodash.js');
 
 function hybrid_operation_to_uneven(collection) {
-    var sum = 0;
-    for (var i = 0; i < collection.length; i++) {
-        if (collection[i]%2 === 1) {
-            sum += collection[i] * 3 + 5;
+    var get_odd = _.filter_in(collection,function (num) {
+        if (num % 2 === 1) {
+            return true;
+        }else {
+            return false;
         }
-    }
-    return sum;
+    });
+    var result = _.map(get_odd,function (num) {
+        return num * 3 + 5;
+    });
+    return _.sum(result);
 }
 
 module.exports = hybrid_operation_to_uneven;
