@@ -1,14 +1,13 @@
 'use strict';
-
+var _ = require('../my_lodash/my_lodash.js');
 function find_first_even(collection) {
-    var num;
-    for (var i = 0; i < collection.length; i++) {
-        if (collection[i] % 2 === 0) {
-            num = collection[i];
-            break;
+    return _.first(collection,function (num) {
+        if (num % 2 === 0) {
+            return true;
+        }else {
+            return false;
         }
-    }
-    return num;
+    });
 }
 
 module.exports = find_first_even;
