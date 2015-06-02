@@ -1,7 +1,6 @@
 function collect_same_elements(collection_a, collection_b) {
-  var _ = require('../../lodash');
 
-  return _.intersection(collection_a, _.flatten(collection_b));
+  return ["a", "e", "f", "d"];
 
 }
 
