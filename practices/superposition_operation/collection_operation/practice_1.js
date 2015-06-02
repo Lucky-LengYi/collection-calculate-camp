@@ -1,10 +1,10 @@
 'use strict';
-
+var _ = require('../../my_lodash/my_lodash.js');
 function hybrid_operation(collection) {
-    var sum = 0;
-    for (var i = 0; i < collection.length; i++) {
-        sum += collection[i] * 3 +2;
-    }
+    var three_times_add_two = _.map(collection,function (num) {
+        return num * 3 + 2;
+    });
+    var sum = _.sum(three_times_add_two);
     return sum;
 }
 
