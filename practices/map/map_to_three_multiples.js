@@ -1,15 +1,11 @@
 'use strict';
-function three_times(n) {
-    return n * 3;
-}
+var _ = require('../my_lodash/my_lodash.js');
 
 var map_to_three_multiples = function(collections){
-
-    for (var i = 0; i < collections.length; i++) {
-      collections[i] = three_times(collections[i]);
-    }
-
-    return collections;
+  var result = _.map(collections,function (num) {
+      return num * 3;
+  });
+  return result;
 };
 
 module.exports = map_to_three_multiples;
