@@ -3,9 +3,8 @@ var reduce = require('./reduce.js');
 
 function exist(collection,num) {
     var result = false;
-    var item = num;
-    reduce(collection,function (num_a,num_b) {
-        if (num_a === item || num_b === item) {
+    each(collection,function (val) {
+        if (val === num) {
             result = true;
         }
     });
