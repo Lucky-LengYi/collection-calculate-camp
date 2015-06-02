@@ -1,11 +1,8 @@
 'use strict';
 
+var _ = require('../my_lodash/my_lodash.js');
 function calculate_elements_sum(collection) {
-    var sum = 0;
-    for (var i = 0; i < collection.length; i++) {
-       sum += collection[i];
-    }
-    return sum;
+    return _.sum(collection);
 }
 
 module.exports = calculate_elements_sum;
