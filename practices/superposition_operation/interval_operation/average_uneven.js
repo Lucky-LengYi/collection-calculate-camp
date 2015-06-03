@@ -8,7 +8,6 @@ function average_uneven(collection) {
             return false;
         }
     });
-
     var sum = _.sum(result_array);
     return sum / result_array.length;
 }

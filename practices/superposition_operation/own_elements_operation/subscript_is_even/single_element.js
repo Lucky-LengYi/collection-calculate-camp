@@ -1,11 +1,12 @@
 'use strict';
+var _ = require('../../../my_lodash/my_lodash.js');
 var single_element = function(collection){
     var result = [];
-    for (var i = 0; i < collection.length; i++) {
+    _.each(collection,function (num,i) {
         if (i % 2 === 0) {
-            result[result.length] = collection[i];
+            result[result.length] = num;
         }
-    }
+    });
     return result;
 };
 module.exports = single_element;
