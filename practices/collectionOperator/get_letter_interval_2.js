@@ -7,7 +7,6 @@ function get_letter_interval_2(number_a, number_b) {
         return _.num_to_letter(num);
     });
     return result;
-
 }
 
 module.exports = get_letter_interval_2;

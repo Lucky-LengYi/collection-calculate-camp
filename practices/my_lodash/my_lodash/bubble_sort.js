@@ -18,14 +18,14 @@ function bubble_sort(collection,func) {
             }
         }
     }
-    return a;
+    return collection;
 }
 
-var a = [1,2,3,4,5,6,7,8,9];
-var b = bubble_sort(a,function (num_a,num_b) {
-    if (num_a > num_b) {
-
-    }
-});
+// var a = [1,2,3,4,5,6,7,8,9];
+// var b = bubble_sort(a,function (num_a,num_b) {
+//     if (num_a > num_b) {
+//
+//     }
+// });
 
 module.exports = bubble_sort;
