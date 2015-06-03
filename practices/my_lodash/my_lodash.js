@@ -11,4 +11,5 @@ module.exports = {
   'sum': require('./my_lodash/sum'),
   'bubble_sort': require('./my_lodash/bubble_sort'),
   'range': require('./my_lodash/range'),
+  'num_to_letter': require('./my_lodash/num_to_letter'),
 };
