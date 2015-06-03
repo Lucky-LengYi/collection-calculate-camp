@@ -1,28 +1,17 @@
 'use strict';
-
-function get_even_number(array,number) {
-    if(number%2 === 0){
-        array[array.length] = number;
-    }
-    return array;
-}
+var _ = require('../my_lodash/my_lodash.js');
 
 function get_integer_interval_2(number_a, number_b) {
-    var array = [];
-    var i,x,y;
-
-    if (number_a < number_b) {
-        for (i = number_a; i <= number_b; i++) {
-            array = get_even_number(array,i);
+    var result = _.range(number_a,number_b);
+    result = _.filter_in(result,function (num) {
+        if (num % 2 === 0) {
+            return true;
+        }else {
+            return false;
         }
-    }
-    if (number_a >= number_b) {
-        for (i = number_a; i >= number_b; i--) {
-            array = get_even_number(array,i);
-        }
-    }
+    });
+    return result;
 
-    return array;
 }
 
 module.exports = get_integer_interval_2;

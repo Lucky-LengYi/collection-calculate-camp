@@ -5,5 +5,10 @@ function range(num_a,num_b) {
     for (var i = 0; i <= count; i ++) {
         result[result.length] = (num_a + i * step);
     }
+    if (num_a === num_b) {
+        result = [num_a];
+    }
     return result;
 }
+
+module.exports = range;

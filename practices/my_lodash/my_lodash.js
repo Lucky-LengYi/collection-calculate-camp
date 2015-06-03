@@ -10,4 +10,5 @@ module.exports = {
   'min': require('./my_lodash/min'),
   'sum': require('./my_lodash/sum'),
   'bubble_sort': require('./my_lodash/bubble_sort'),
+  'range': require('./my_lodash/range'),
 };

@@ -1,22 +1,5 @@
 'use strict';
-
-function create_new_list(number_a,number_b) {
-    var array = [];
-    var i;
-    if (number_a < number_b) {
-        for (i = number_a; i <= number_b; i++) {
-            array[array.length] = i;
-        }
-    }
-    if (number_a >= number_b) {
-        for (i = number_a; i >= number_b; i--) {
-            array[array.length] = i;
-        }
-    }
-
-    return array;
-}
-
+var _ = require('../my_lodash/my_lodash.js');
 function change_num_to_letter(array) {
     var NUMBER_OF_LETTERS = 26;
     for (var i = 0; i < array.length; i++) {
@@ -38,11 +21,9 @@ function change_num_to_letter(array) {
 }
 
 function get_letter_interval_2(number_a, number_b) {
-
-    var array = create_new_list(number_a,number_b);
-    array = change_num_to_letter(array);
-
-    return array;
+    var result = _.range(number_a,number_b);
+    result = change_num_to_letter(result);
+    return result;
 
 }
 

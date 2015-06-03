@@ -1,10 +1,12 @@
 'use strict';
-
+var _ = require('../my_lodash/my_lodash.js');
 function calculate_elements_sum(collection, element) {
     var subscript;
-    for (var i = 0; i < collection.length; i++) {
-        subscript = collection[i] === element ? i : subscript;
-    }
+    _.each(collection,function (num,i) {
+        if (num === element) {
+            subscript = i;
+        }
+    });
     return subscript;
 }
 
