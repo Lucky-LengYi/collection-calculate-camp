@@ -1,5 +1,6 @@
 'use strict';
 var _ = require('../my_lodash/my_lodash.js');
+
 function choose_divisible_integer(collection_a, collection_b) {
     var result = [];
     _.filter_in(collection_a,function (num_a) {
@@ -9,7 +10,6 @@ function choose_divisible_integer(collection_a, collection_b) {
             }
         });
     });
-
     return result;
 }
 

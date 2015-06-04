@@ -8,7 +8,6 @@ function get_intersection(collection_a, collection_b) {
             result[result.length] = item;
         }
     });
-
     return result;
 }
 
