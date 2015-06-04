@@ -2,8 +2,8 @@ var each = require('./each.js');
 
 function filter_out(collection,func) {
     var result = [];
-    each(collection,function (num) {
-        if (!func(num)) {
+    each(collection,function (num,i) {
+        if (!func(num,i)) {
             result[result.length] = num;
         }
     });

@@ -12,4 +12,6 @@ module.exports = {
   'bubble_sort': require('./my_lodash/bubble_sort'),
   'range': require('./my_lodash/range'),
   'num_to_letter': require('./my_lodash/num_to_letter'),
+  'flatten': require('./my_lodash/flatten'),
+  'get_median': require('./my_lodash/get_median'),
 };
