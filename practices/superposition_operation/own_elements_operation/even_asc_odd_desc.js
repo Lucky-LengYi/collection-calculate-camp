@@ -3,18 +3,10 @@ var _ = require('../../my_lodash/my_lodash.js');
 
 var even_asc_odd_desc = function(collection){
     var odd = _.filter_in(collection,function (num) {
-        if (num % 2 === 1) {
-            return true;
-        }else {
-            return false;
-        }
+        return num % 2 === 1;
     });
     var even = _.filter_in(collection,function (num) {
-        if (num % 2 === 0) {
-            return true;
-        }else {
-            return false;
-        }
+        return num % 2 === 0;
     });
     odd = _.bubble_sort(odd);
     even = _.bubble_sort(even);
